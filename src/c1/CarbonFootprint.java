@@ -13,6 +13,7 @@ public class CarbonFootprint {
         boolean MoreUsers = true;
 
         PlasticFootprint();
+
         MilesDriven();
 
         ArrayList Week = new ArrayList();
