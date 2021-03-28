@@ -20,6 +20,10 @@ public class CarbonFootprint {
         double[] UserInfo = new double[2];
         String Person = (String) User.put(UserID, Week);
         if (MoreUsers) {
+            UserInfo[0] = CarbonImpact;
+            UserInfo[1] = TotalGrams;
+            Week.add(UserInfo);
+            User.put(UserID, Week);
             System.out.println("Do you have more people? (Answer yes or no)");
             String More = string.nextLine();
             if (More.equals("Yes") || More.equals("yes")){
@@ -32,11 +36,6 @@ public class CarbonFootprint {
             }
         }
 
-        UserInfo[0] = CarbonImpact;
-        UserInfo[1] = TotalGrams;
-
-        Week.add(UserInfo);
-        User.put(UserID, Week);
 
         Set<Map.Entry<String, Double>> entries = User.entrySet();
 
